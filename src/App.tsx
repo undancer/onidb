@@ -9,26 +9,26 @@ import Header from "./Header";
 
 const App: React.FC = () => {
 
-
     let browserHistory = createBrowserHistory();
-
 
     return (
         <div className="App">
-            <CssBaseline/>
-            <Header/>
-            <Router history={browserHistory}>
-                {/*<DefaultLayout component={Root}/>*/}
-                {/*<Redirect path="/" exact to="/element"/>*/}
-                {/*<Route path="/element" component={Element}/>*/}
-                <Switch>
-                    {/*<Route path="/" exact component={Root}/>*/}
-                    <Redirect path="/" exact to="/element"/>
-                    <Route path="/element" component={Element}/>
-                    <Redirect to="/"/>
-                </Switch>
-            </Router>
-            <Footer/>
+            <React.Fragment>
+                <CssBaseline/>
+                <Header/>
+                <Router history={browserHistory}>
+                    {/*<DefaultLayout component={Root}/>*/}
+                    {/*<Redirect path="/" exact to="/element"/>*/}
+                    {/*<Route path="/element" component={Element}/>*/}
+                    <Switch>
+                        {/*<Route path="/" exact component={Root}/>*/}
+                        <Redirect path="/" exact to="/element"/>
+                        <Route path="/element" component={Element}/>
+                        <Redirect to="/"/>
+                    </Switch>
+                </Router>
+                <Footer/>
+            </React.Fragment>
         </div>
     );
 };

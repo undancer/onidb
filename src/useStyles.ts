@@ -1,6 +1,11 @@
 import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
+    root: {
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
     icon: {
         marginRight: theme.spacing(2),
     },
@@ -30,6 +35,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         padding: theme.spacing(6),
     },
+    margin: {
+        margin: theme.spacing(1),
+    }
 }));
 
 export default useStyles;
