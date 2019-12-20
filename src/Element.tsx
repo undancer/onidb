@@ -13,8 +13,19 @@ import {
 } from "@material-ui/core";
 import elements from "./oni";
 import ToUnderscore from "./utils/StringUtils";
-import {Refresh as RefreshIcon, Search as SearchIcon} from "@material-ui/icons";
+import {
+    FormatAlignCenter as FormatAlignCenterIcon,
+    FormatAlignLeft as FormatAlignLeftIcon,
+    FormatAlignRight as FormatAlignRightIcon,
+    FormatBold as FormatBoldIcon,
+    FormatItalic as FormatItalicIcon,
+    FormatUnderlined as FormatUnderlinedIcon,
+    Refresh as RefreshIcon,
+    Search as SearchIcon
+} from "@material-ui/icons";
 import useStyles from "./useStyles";
+import {FormattedMessage} from "react-intl";
+
 
 // function a11yProps(index: {}) {
 //     return {
@@ -48,6 +59,7 @@ const Element: React.FC = () => {
     //     setValue(newValue);
     // };
 
+
     return (
         <main>
             <div style={{height: 64 + 48 + 48}}></div>
@@ -79,6 +91,22 @@ const Element: React.FC = () => {
                     <Input defaultValue="Disabled" disabled inputProps={{'aria-label': 'description'}}/>
                     <Input defaultValue="Error" error inputProps={{'aria-label': 'description'}}/>
                 </form>
+
+                <Divider/>
+                
+                <Grid container alignItems="center" className={classes.root}>
+                    <FormatAlignLeftIcon/>
+                    <FormatAlignCenterIcon/>
+                    <FormatAlignRightIcon/>
+                    <Divider orientation="vertical"/>
+                    <FormatBoldIcon/>
+                    <FormatItalicIcon/>
+                    <FormatUnderlinedIcon/>
+                </Grid>
+
+                <Divider/>
+
+                <FormattedMessage id="foo" defaultMessage="Foo"/>;
 
                 <Divider/>
 
