@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <AppBar position="static" color="primary">
+        <AppBar position="fixed" color="primary">
             <Toolbar>
                 <CameraIcon className={classes.icon}/>
                 <Typography variant="h6" color="inherit" noWrap>
