@@ -9,15 +9,19 @@ const main = () => {
             if (!value.match(/^strings_preinstalled_\w{2}_klei\.po$/g)) {
                 return;
             }
-            let data = po2json.parseFileSync([stringsPath, value].join("/"));
-            let content = JSON.stringify(data, null, 4);
+            let data = po2json.parseFileSync([stringsPath, value].join("/"), {
+                stringify: true,
+                pretty: true,
+                format: 'mf',
+                fullMF: true,
+            });
 
             let savePath = "./src/oni/strings";
 
             if (!fs.existsSync(savePath)) {
                 fs.mkdirSync(savePath, {recursive: true})
             }
-            fs.writeFile([savePath, value.replace(".po", ".json")].join("/"), content, function (error) {
+            fs.writeFile([savePath, value.replace(".po", ".json")].join("/"), data, function (error) {
                 console.log("文件写完");
             })
         });
