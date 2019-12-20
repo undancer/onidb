@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-import {Card, CardContent, Container, Grid} from "@material-ui/core";
+import {Card, CardContent, Container, CssBaseline, Grid} from "@material-ui/core";
 import elements from "./oni";
+import Header from "./Header";
+import Content from "./Content";
+import Footer from "./Footer";
 
 const App: React.FC = () => {
 
@@ -16,6 +19,13 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
+
+            <CssBaseline/>
+            <Header/>
+
+            <Content/>
+
+            <Footer/>
 
             <div style={{height: 64}}></div>
 
