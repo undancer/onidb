@@ -26,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "hello": "npx run scripts/main.js"
+    "hello": "npx run ./scripts/main.js",
+    "po2json": "npx run ./scripts/po2json.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "js-yaml": "latest"
+    "js-yaml": "latest",
+    "po2json": "^1.0.0-alpha"
   }
 }
