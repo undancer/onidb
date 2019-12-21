@@ -9,7 +9,8 @@ import {
     IconButton,
     Input,
     TextField,
-    Tooltip
+    Tooltip,
+    Typography
 } from "@material-ui/core";
 import elements from "./oni/elements";
 import ToUnderscore from "./utils/StringUtils";
@@ -24,7 +25,7 @@ import {
     Search as SearchIcon
 } from "@material-ui/icons";
 import useStyles from "./useStyles";
-import {FormattedMessage} from "react-intl";
+import {FormattedHTMLMessage, FormattedMessage} from "react-intl";
 
 
 // function a11yProps(index: {}) {
@@ -148,6 +149,8 @@ const Element: React.FC = () => {
                             let id = element['elementId'];
                             let name = ToUnderscore(id);
                             let src = "assets/elements/" + name + ".png";
+                            let key = element['localizationID'];
+
                             return (
                                 <Card key={id} style={{
                                     width: 75,
@@ -165,6 +168,9 @@ const Element: React.FC = () => {
                                             textAlign: "center"
                                         }} src={src}
                                              alt={name}/>
+                                        <Typography style={{fontSize: 10}}>
+                                            <FormattedHTMLMessage id={key}/>
+                                        </Typography>
                                     </CardContent>
                                 </Card>
                             )

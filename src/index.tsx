@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {defineMessages, IntlProvider} from "react-intl";
-import zh_CN from "./languages/zh-CN.json";
+import zh_CN from "./oni/strings/zh_CN.json";
 
 const locale = navigator.language;
 
