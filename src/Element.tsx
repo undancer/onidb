@@ -11,7 +11,7 @@ import {
     TextField,
     Tooltip
 } from "@material-ui/core";
-import elements from "./oni";
+import elements from "./oni/elements";
 import ToUnderscore from "./utils/StringUtils";
 import {
     FormatAlignCenter as FormatAlignCenterIcon,
@@ -93,7 +93,7 @@ const Element: React.FC = () => {
                 </form>
 
                 <Divider/>
-                
+
                 <Grid container alignItems="center" className={classes.root}>
                     <FormatAlignLeftIcon/>
                     <FormatAlignCenterIcon/>
