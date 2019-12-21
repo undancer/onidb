@@ -169,7 +169,7 @@ const Element: React.FC = () => {
                                         }} src={src}
                                              alt={name}/>
                                         <Typography style={{fontSize: 10}}>
-                                            <FormattedHTMLMessage id={key}/>
+                                            <FormattedHTMLMessage id={key} defaultMessage="元素遗失"/>
                                         </Typography>
                                     </CardContent>
                                 </Card>

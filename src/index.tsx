@@ -8,7 +8,9 @@ import zh_CN from "./oni/strings/zh_CN.json";
 
 const locale = navigator.language;
 
-const messages: {} = defineMessages({...zh_CN});
+const zhData: {} = defineMessages({...zh_CN});
+const messages: {} = {};
+Object.assign(messages, zhData);
 
 ReactDOM.render(
     (
